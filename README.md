@@ -35,5 +35,6 @@ Ideas:
  - Manage Bills
  - Menage personal information
 
+Development app can be ran at: http://fathomless-lowlands-8624.herokuapp.com/
 
 http://daringfireball.net/projects/markdown/syntax
