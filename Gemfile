@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
 gem 'pg', '0.17.1'
+gem 'devise', '3.2.4'
+
 # Use sqlite3 as the database for Active Record
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -27,6 +29,10 @@ gem "pry", "0.9.12.6", group: [:development, :test]
 gem "pry-rails", "0.3.2", group: [:development, :test]
 gem 'jazz_hands', '0.5.2', group: [:development, :test]
 
+group :development do
+  gem "quiet_assets", ">= 1.0.1"
+end
+
 group :test do
   gem 'rspec-rails', '2.14.2'
   gem 'rspec-mocks', '2.14.6'
@@ -38,5 +44,9 @@ group :test do
   gem 'webmock', '1.18.0'
   gem 'rake-progressbar', '0.0.5'
 end
+
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 ruby "2.1.1"
