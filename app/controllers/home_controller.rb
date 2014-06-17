@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
-  def home
+  def dashboard
+    @bills = Bill.all
   end
 
 end

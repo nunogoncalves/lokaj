@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @bill.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @bill.end_date %>
+</p>
+
+<p>
+  <strong>Value in cents:</strong>
+  <%= @bill.value_in_cents %>
+</p>
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>

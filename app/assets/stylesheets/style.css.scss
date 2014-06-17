@@ -1,0 +1,36 @@
+.dashboard_container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 613px;
+  font-size: 25px;
+  a {
+    color: white;
+  }
+  & div {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 5px;
+    & img {
+      width: 150px;
+      height: 180px;
+    }
+    &.houses_container {
+      background: #3498db;
+    }
+
+    &.bills_container {
+      background: #2ecc71;
+    }
+    &.tenants_container {
+      background: #f39c12;
+      & img {
+        width: 200px;
+      }
+    }
+  }
+}

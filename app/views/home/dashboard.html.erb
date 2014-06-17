@@ -1,3 +1,17 @@
-This is the dashboard
+<%= link_to 'Nova entrada de conta', new_bill_path %>
 
-Attempt two.
+<div class="dashboard_container">
+  <div class="houses_container">
+    Casas
+    <img src="http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/yellow-home-icon.png" alt="">
+    <!-- http://www.iconarchive.com/search?q=house&page=2 -->
+  </div>
+  <div class="bills_container">
+    <%= link_to 'Contas', bills_path %>
+    <img src="https://cdn4.iconfinder.com/data/icons/finance-3/512/14-512.png" alt="">
+  </div>
+  <div class="tenants_container">
+    Inquilinos
+    <img src="http://inventorieshouse.com/images/icon-assign-tenant.png" alt="">
+  </div>
+</div>
