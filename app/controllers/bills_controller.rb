@@ -21,10 +21,10 @@ class BillsController < ApplicationController
   def edit
   end
 
-  # POST /bills
-  # POST /bills.json
   def create
-    @bill = Bill.new(bill_params)
+    binding.pry
+    @bill = current_user.houses.find(bill_params[:house_id]).bills.new(bill_params)
+    # @bill = current_user.houses.find(bill_params[:house_id]).bills.new(bill_params)
 
     respond_to do |format|
       if @bill.save
@@ -69,6 +69,6 @@ class BillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bill_params
-      params.require(:bill).permit(:start_date, :end_date, :value_in_cents)
+      params.require(:bill).permit(:start_date, :end_date, :value_in_cents, :house_id)
     end
 end

@@ -21,13 +21,16 @@
     }
     &.houses_container {
       background: #3498db;
+      cursor: pointer;
     }
 
     &.bills_container {
       background: #2ecc71;
+      cursor: pointer;
     }
     &.tenants_container {
       background: #f39c12;
+      cursor: pointer;
       & img {
         width: 200px;
       }

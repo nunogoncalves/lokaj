@@ -11,17 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616211849) do
+ActiveRecord::Schema.define(version: 20140619085925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bills", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "house_id"
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "value_in_cents"
     t.integer  "days"
     t.integer  "value_per_day_in_cents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "houses", force: true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "street_line_one"
+    t.string   "street_line_two"
+    t.string   "post_code"
+    t.string   "city"
+    t.string   "country"
+    t.boolean  "is_rented"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tenants", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "house_id"
+    t.string   "name"
+    t.string   "gender"
+    t.string   "email"
+    t.datetime "birthdate"
+    t.datetime "entered"
+    t.datetime "exited"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

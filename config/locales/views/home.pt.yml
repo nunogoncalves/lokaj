@@ -1,0 +1,6 @@
+pt:
+  home:
+    dashboard:
+      houses: 'Casas'
+      bills: 'Contas'
+      tenants: 'Inquilinos'

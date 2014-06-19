@@ -1,0 +1,49 @@
+<%= form_for(@tenant) do |f| %>
+  <% if @tenant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tenant.errors.count, "error") %> prohibited this tenant from being saved:</h2>
+
+      <ul>
+      <% @tenant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :house_id %><br>
+    <%= f.number_field :house_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :birthdate %><br>
+    <%= f.datetime_select :birthdate %>
+  </div>
+  <div class="field">
+    <%= f.label :entered %><br>
+    <%= f.datetime_select :entered %>
+  </div>
+  <div class="field">
+    <%= f.label :exited %><br>
+    <%= f.datetime_select :exited %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
