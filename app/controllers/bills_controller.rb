@@ -22,7 +22,6 @@ class BillsController < ApplicationController
   end
 
   def create
-    binding.pry
     @bill = current_user.houses.find(bill_params[:house_id]).bills.new(bill_params)
     # @bill = current_user.houses.find(bill_params[:house_id]).bills.new(bill_params)
 

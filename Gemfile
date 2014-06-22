@@ -1,33 +1,27 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '4.1.1'
-gem 'pg', '0.17.1'
-gem 'devise', '3.2.4'
-
-# Use sqlite3 as the database for Active Record
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'less-rails'
 gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'therubyracer'
+gem 'jquery-rails'
+gem 'pg', '0.17.1'
+gem 'rails', '4.1.1'
+gem 'devise', '3.2.4'
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
+gem 'simple_form', '3.0.2'
+gem 'uglifier', '>= 1.3.0'
+gem 'select2-rails', '3.5.7'
+gem 'sass-rails', '~> 4.0.3'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
 gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'spring',                    group: :development
+gem 'rails_12factor',            group: :production
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
-gem 'rails_12factor', group: :production
-
-gem "pry", "0.9.12.6", group: [:development, :test]
-gem "pry-rails", "0.3.2", group: [:development, :test]
-gem 'jazz_hands', '0.5.2', group: [:development, :test]
+gem "pry", "0.9.12.6",           group: [:development, :test]
+gem "pry-rails", "0.3.2",        group: [:development, :test]
+gem 'jazz_hands', '0.5.2',       group: [:development, :test]
 
 group :development do
   gem "quiet_assets", ">= 1.0.1"
@@ -44,9 +38,5 @@ group :test do
   gem 'webmock', '1.18.0'
   gem 'rake-progressbar', '0.0.5'
 end
-
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 ruby "2.1.1"

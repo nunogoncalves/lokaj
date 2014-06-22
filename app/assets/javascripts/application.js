@@ -12,7 +12,9 @@
 //
 //= require global
 //= require jquery
+//= require select2
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.datetimepicker
 //= require turbolinks
 //= require_tree .

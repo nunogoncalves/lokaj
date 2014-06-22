@@ -1,4 +1,4 @@
-<%= form_for(@bill) do |f| %>
+<%= simple_form_for(@bill) do |f| %>
   <% if @bill.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
@@ -11,21 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :start_date %><br>
-    <%= f.text_field :start_date %>
-  </div>
-  <div class="field">
-    <%= f.label :end_date %><br>
-    <%= f.text_field :end_date %>
+  <div class="dates">
+    <div class="field" style="display: inline-block">
+      <%= f.label :start_date %><br>
+      <%= f.text_field :start_date, class: 'datetimepicker' %>
+    </div>
+    <div class="field" style="display: inline-block">
+      <%= f.label :end_date %><br>
+      <%= f.text_field :end_date, class: 'datetimepicker' %>
+    </div>
   </div>
   <div class="field">
     <%= f.label :value_in_cents %><br>
     <%= f.text_field :value_in_cents %>
   </div>
   <%= f.label :house %>
-  <%= f.text_field :house_id, value: 1 %>
+  <%= f.association :house, as: :select, input_html: { class: 'select2'} %>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script>
+  $(function() {
+    $('.select2').select2({width: 'resolve'});
+    $('.datetimepicker').datetimepicker({
+      inline:true,
+      lang:'pt',
+      timepicker:false,
+    });
+  })
+</script>
