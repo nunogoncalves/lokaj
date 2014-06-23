@@ -25,8 +25,8 @@
     <%= f.label :value_in_cents %><br>
     <%= f.text_field :value_in_cents %>
   </div>
-  <%= f.label :house %>
-  <%= f.association :house, as: :select, input_html: { class: 'select2'} %>
+  <%= f.association :house, as: :select, input_html: { placeholder: t('.choose_house'), class: 'select2'} %>
+  <%= f.input :ref_bill_type_id, collection: RefBillType.all, required: true, input_html: { placeholder: t('.choose_type'), class: 'select2' } %>
   <div class="actions">
     <%= f.submit %>
   </div>
@@ -36,7 +36,7 @@
   $(function() {
     $('.select2').select2({width: 'resolve'});
     $('.datetimepicker').datetimepicker({
-      inline:true,
+      // inline:true,
       lang:'pt',
       timepicker:false,
     });

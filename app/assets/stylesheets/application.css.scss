@@ -28,6 +28,7 @@ body {
   padding-top: 60px;
 }
 
+//registrations and sessions styles
 .registrations_container {
   .flat-form {
     /*background: #e74c3c;*/
@@ -182,4 +183,14 @@ body {
   :-ms-input-placeholder {
     color: #e74c3c;
   }
+}
+
+//bills styles
+.new_bill_container {
+  width: 444px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 360px;
+  // background-color: #449CF5;
+  background-color: #2ecc71;
 }
